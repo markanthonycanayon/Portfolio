@@ -21,7 +21,7 @@ body {
 
 .wrap {
   width: calc(100% - 104px);
-    max-width: 1200px;
+    max-width: 1920px;
     margin-left: auto;
     margin-right: auto;
 }
