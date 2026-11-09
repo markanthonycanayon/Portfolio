@@ -1200,12 +1200,6 @@ box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 3
 
 
 
-
-
-
-
-
-
     .timeline-row {
                grid-template-columns: 1fr;
 
@@ -1297,7 +1291,7 @@ box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 3
     }
 
     .project-card {
-    
+       height: 400px;
     }
 
     .project-card img {
