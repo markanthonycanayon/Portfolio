@@ -582,26 +582,21 @@ margin-bottom:45px;
 
 .project-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 }
 
 .project-card {
-    background: #f4f4f4;
-    border-radius: 15px;
-   
+      width: 100%;
 
-  transition: transform 0.4s ease;
 
 }
 
 .project-card img {
     width: 100%;
-    height: 350px;
-    object-fit: cover;
-    object-position: top center;
-    border-radius: 15px;
-box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+
+   
+   
    
 }
 
@@ -611,7 +606,7 @@ box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 3
 }
 
 .project-card:hover {
-    transform: scale(1.08);
+   
 }
 
 .project-card p {
@@ -1200,6 +1195,12 @@ box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 3
 
 
 
+
+
+
+
+
+
     .timeline-row {
                grid-template-columns: 1fr;
 
@@ -1291,11 +1292,11 @@ box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 3
     }
 
     .project-card {
-       height: 400px;
+    
     }
 
     .project-card img {
-        height: 400px;
+        height: 250px;
     }
 
     .project-card h3 {
@@ -1455,3 +1456,67 @@ margin-top:20px;
 .service-card:hover  {
     transform: scale(1.08);
 }
+
+
+
+.monitor {
+    position: relative;
+    display: block;
+    width: 100%;
+   
+    background: transparent;
+    text-decoration: none;
+}
+
+.monitor-screen {
+    position: relative;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 10;
+    overflow: hidden !important;
+    background: #111;
+    border: 7px solid #171717;
+    border-radius: 12px;
+    z-index: 2;
+}
+
+.monitor-screen img {
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    max-width: none !important;
+    object-fit: initial !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    transform: translateY(0);
+    transition: none;
+    will-change: transform;
+}
+
+
+
+.monitor::after {
+    content: "";
+    position: absolute;
+    left: 15%;
+    width: 70%;
+    height: 12px;
+    background: rgba(0,0,0,.16);
+    filter: blur(10px);
+    border-radius: 50%;
+    z-index: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
