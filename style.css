@@ -1208,101 +1208,322 @@ input {
    WORK EXPERIENCE
 ========================================= */
 
+
+
+/* =====================================
+   WORK EXPERIENCE SECTION
+===================================== */
+
 .experience-section {
-    background: #fff;
-margin: 70px;
-
-}
-
-
-
-.experience-inner {
-    background: #fff4ed;
-    border-radius: 20px;
-    display: grid;
-    grid-template-columns: .8fr 1fr 1fr;
-    gap: 35px;
-    align-items: center;
-}
-
-.experience-intro {
-    padding-right: 25px;
-   
-}
-
-.experience-intro h2 {
-    font-size: 25px;
-}
-
-.experience-intro p {
-    font-size: 13px;
-    margin-top: 12px;
-}
-
-.experience-item {
     position: relative;
-    padding-left: 25px;
-    border-right: 1px solid #ccc;
-    padding-right: 20px;
+    width: 100%;
+    padding: 75px 30px;
+    background: #ffffff;
+    overflow: hidden;
 }
 
-.experience-item:last-child {
-    border: none;
+.experience-container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
 }
 
-.timeline-dot {
-    position: absolute;
-    top: 4px;
-    left: -5px;
-    width: 14px;
-    height: 14px;
-    border: 3px solid #ffb08d;
-    background: var(--orange);
-    border-radius: 50%;
+/* =====================================
+   SECTION HEADING
+===================================== */
+
+.experience-heading {
+    margin-bottom: 36px;
 }
 
-.timeline-dot.dark {
-    background: #555;
-    border-color: #ccc;
-}
-
-.experience-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 10px;
+.experience-eyebrow {
+    display: block;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 4px;
+    color: #f4510b;
     margin-bottom: 12px;
 }
 
-.experience-header h3 {
-    font-size: 15px;
+.experience-heading h2 {
+    font-size: 48px;
+    line-height: 1.15;
+    font-weight: 800;
+    color: #111820;
+    margin: 0 0 15px;
 }
 
-.experience-header strong {
-    color: var(--orange);
-    font-size: 12px;
+.experience-heading h2 span {
+    color: #f4510b;
 }
 
-.date-label {
-    background: white;
-    border-radius: 30px;
+.heading-line {
+    width: 58px;
+    height: 3px;
+    background: #f4510b;
+    margin-bottom: 17px;
+}
+
+.experience-heading p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #657080;
+    margin: 0;
+}
+
+/* =====================================
+   TIMELINE
+===================================== */
+
+.experience-timeline {
+    position: relative;
+    padding-left: 62px;
+}
+
+.experience-timeline::before {
+    content: "";
+    position: absolute;
+    left: 15px;
+    top: 25px;
+    bottom: 25px;
+    width: 2px;
+    background: #ff7136;
+}
+
+/* =====================================
+   EXPERIENCE ITEM
+===================================== */
+
+.experience-item {
+    position: relative;
+    margin-bottom: 20px;
+    z-index: 1;
+}
+
+.experience-item:last-child {
+    margin-bottom: 0;
+}
+
+/* Timeline Marker */
+
+.timeline-marker {
+    position: absolute;
+    left: -62px;
+    top: 23px;
+    width: 32px;
+    height: 32px;
+    border: 2px solid #ff681f;
+    background: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+.timeline-marker span {
+    width: 14px;
+    height: 14px;
+    background: #ff681f;
+    border-radius: 50%;
+}
+
+/* =====================================
+   EXPERIENCE CARD
+===================================== */
+
+.experience-card {
+    display: grid;
+    grid-template-columns: 34% 66%;
+    align-items: stretch;
+    padding: 28px;
+    border-radius: 18px;
+    border: 1px solid #e5e7eb;
+    background: #ffffff;
+    box-shadow: 0 5px 20px rgba(20, 30, 45, 0.035);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 28px rgba(20, 30, 45, 0.07);
+}
+
+/* First Experience */
+
+.eclerx-card {
+    background: #fff7f2;
+    border-color: #fff0e7;
+}
+
+/* =====================================
+   COMPANY INFORMATION
+===================================== */
+
+.experience-info {
+    padding-right: 28px;
+    border-right: 1px solid #dedede;
+}
+
+.company-header {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.company-logo {
+    width: 78px;
+    height: 78px;
+    flex-shrink: 0;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 19px;
+    font-weight: 600;
+}
+
+.eclerx-logo {
+    background: #f4510b;
+    color: #ffffff;
+}
+
+.engage-logo {
+    background: #111820;
+    color: #ffffff;
+}
+
+.company-details h3 {
+    font-size: 23px;
+    line-height: 1.2;
+    font-weight: 800;
+    color: #111820;
+    margin: 0 0 7px;
+}
+
+.company-details h4 {
+    font-size: 17px;
+    font-weight: 700;
+    color: #f4510b;
+    margin: 0 0 10px;
+}
+
+.experience-date {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
     padding: 5px 12px;
-    font-size: 10px;
+    background: #ffffff;
+    border-radius: 30px;
+    font-size: 13px;
+    color: #465263;
     white-space: nowrap;
 }
 
-.experience-item ul {
-    padding-left: 15px;
+.engage-card .experience-date {
+    background: #f1f3f6;
 }
 
-.experience-item li {
-    font-size: 11px;
-    margin-bottom: 4px;
+.calendar-icon {
+    color: #f4510b;
+    font-size: 16px;
 }
 
-.experience-item li::marker {
-    color: var(--orange);
+.company-description {
+    border-top: 1px solid #dedede;
+    margin-top: 22px;
+    padding-top: 19px;
+    font-size: 15px;
+    line-height: 1.55;
+    color: #596474;
 }
+
+/* =====================================
+   RESPONSIBILITIES
+===================================== */
+
+.experience-responsibilities {
+    padding-left: 32px;
+    display: flex;
+    align-items: center;
+}
+
+.experience-responsibilities ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.experience-responsibilities li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 10px;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #263243;
+}
+
+.experience-responsibilities li:last-child {
+    margin-bottom: 0;
+}
+
+.experience-responsibilities li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 7px;
+    height: 7px;
+    background: #f4510b;
+    border-radius: 50%;
+}
+
+/* =====================================
+   DECORATIVE BACKGROUND
+===================================== */
+
+.experience-section::before {
+    content: "";
+    position: absolute;
+    width: 240px;
+    height: 240px;
+    top: -150px;
+    right: -120px;
+    border: 45px solid #fff5ef;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.experience-section::after {
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    bottom: -85px;
+    left: -65px;
+    border: 2px solid #ff7136;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* =========================================
@@ -1486,16 +1707,8 @@ margin: 70px;
 
 
 
-    .experience-intro {
-        grid-column: 1 / -1;
-        border-right: 0;
-        border-bottom: 1px solid #ccc;
-        padding-bottom: 20px;
-    }
+  
 
-    .experience-item {
-        border-right: 0;
-    }
 
     .footer-inner {
         grid-template-columns: repeat(2, 1fr);
@@ -1764,29 +1977,8 @@ margin: 70px;
 
     /* EXPERIENCE */
 
-    .experience-inner {
-        grid-template-columns: 1fr;
-        gap: 25px;
-    }
-
-    .experience-intro {
-        grid-column: auto;
-        padding-right: 0;
-    }
-
-    .experience-item {
-        padding-left: 25px;
-        padding-right: 0;
-    }
-
-    .experience-header {
-        flex-wrap: wrap;
-        align-items: flex-start;
-    }
-
-    .date-label {
-        font-size: 10px;
-    }
+  
+   
 
 
     /* CONTACT */
@@ -1867,11 +2059,6 @@ margin: 70px;
 }
 
 
-.experience-section {
-    background: #fff;
-margin:40px;
-
-}
 
 
 
@@ -2489,6 +2676,228 @@ html {
 
 
 
+
+/* =====================================
+   TABLET - 1024px
+===================================== */
+
+@media (max-width: 1024px) {
+
+    .experience-section {
+        padding: 65px 25px;
+    }
+
+    .experience-heading h2 {
+        font-size: 40px;
+    }
+
+    .experience-card {
+        grid-template-columns: 35% 65%;
+        padding: 24px;
+    }
+
+    .experience-info {
+        padding-right: 20px;
+    }
+
+    .experience-responsibilities {
+        padding-left: 22px;
+    }
+
+    .company-header {
+        gap: 14px;
+        align-items: flex-start;
+    }
+
+    .company-logo {
+        width: 65px;
+        height: 65px;
+        font-size: 16px;
+    }
+
+    .company-details h3 {
+        font-size: 20px;
+    }
+
+    .experience-date {
+        font-size: 11px;
+        white-space: normal;
+    }
+
+    .experience-responsibilities li {
+        font-size: 14px;
+        margin-bottom: 9px;
+    }
+}
+
+/* =====================================
+   MOBILE - 767px
+===================================== */
+
+@media (max-width: 767px) {
+
+    .experience-section {
+        padding: 55px 20px;
+    }
+
+    .experience-heading {
+        margin-bottom: 30px;
+    }
+
+    .experience-eyebrow {
+        font-size: 12px;
+        letter-spacing: 3px;
+    }
+
+    .experience-heading h2 {
+        font-size: 32px;
+    }
+
+    .experience-heading p {
+        font-size: 14px;
+    }
+
+    .experience-timeline {
+        padding-left: 30px;
+    }
+
+    .experience-timeline::before {
+        left: 8px;
+        top: 20px;
+        bottom: 20px;
+    }
+
+    .timeline-marker {
+        left: -30px;
+        top: 20px;
+        width: 20px;
+        height: 20px;
+    }
+
+    .timeline-marker span {
+        width: 8px;
+        height: 8px;
+    }
+
+    .experience-card {
+        grid-template-columns: 1fr;
+        padding: 20px;
+        gap: 20px;
+        border-radius: 14px;
+    }
+
+    .experience-info {
+        padding-right: 0;
+        border-right: none;
+    }
+
+    .company-header {
+        gap: 15px;
+    }
+
+    .company-logo {
+        width: 60px;
+        height: 60px;
+        border-radius: 12px;
+    }
+
+    .company-details h3 {
+        font-size: 19px;
+    }
+
+    .company-details h4 {
+        font-size: 15px;
+    }
+
+    .experience-date {
+        font-size: 11px;
+    }
+
+    .company-description {
+        margin-top: 18px;
+        padding-top: 15px;
+        font-size: 14px;
+    }
+
+    .experience-responsibilities {
+        padding-left: 0;
+        padding-top: 18px;
+        border-top: 1px solid #e5e5e5;
+    }
+
+    .experience-responsibilities li {
+        font-size: 14px;
+        line-height: 1.55;
+        padding-left: 20px;
+        margin-bottom: 11px;
+    }
+
+    .experience-responsibilities li::before {
+        width: 6px;
+        height: 6px;
+        top: 8px;
+    }
+}
+
+/* =====================================
+   SMALL MOBILE - 480px
+===================================== */
+
+@media (max-width: 480px) {
+
+    .experience-section {
+        padding: 45px 15px;
+    }
+
+    .experience-heading h2 {
+        font-size: 28px;
+    }
+
+    .experience-timeline {
+        padding-left: 25px;
+    }
+
+    .experience-timeline::before {
+        left: 6px;
+    }
+
+    .timeline-marker {
+        left: -25px;
+        width: 18px;
+        height: 18px;
+    }
+
+    .experience-card {
+        padding: 17px;
+    }
+
+    .company-header {
+        gap: 12px;
+    }
+
+    .company-logo {
+        width: 52px;
+        height: 52px;
+        font-size: 14px;
+    }
+
+    .company-details h3 {
+        font-size: 18px;
+    }
+
+    .company-details h4 {
+        font-size: 14px;
+    }
+
+    .experience-date {
+        font-size: 10px;
+        padding: 5px 8px;
+    }
+
+    .experience-responsibilities li {
+        font-size: 13px;
+    }
+}
 
 
 
