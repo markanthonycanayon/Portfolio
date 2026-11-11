@@ -42,7 +42,7 @@
       <a href="#about">About</a>
       <a href="#services">Services</a>
       <a href="#projects">Portfolio</a>
- <a href="#tools">Tools & Platforms</a>
+ 	<a href="#tools">Tools & Platforms</a>
       <a href="#experience">Experience</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -99,7 +99,7 @@
 
       <div class="hero-buttons">
         <a href="#projects" class="btn-primary">
-          View My Portfolio ↗
+          View My Portfolio
         </a>
 
         <a href="#contact" class="btn-outline">
@@ -320,12 +320,11 @@
 <!-- ================= PORTFOLIO ================= -->
 
 
-<section class="projects-section" id="projects">
-
+<section class="featured-projects" id="projects">
   <div class="projects-container">
 
-    <!-- SECTION HEADER -->
-    <div class="projects-header">
+    <div class="projects-heading">
+
 
       <span class="eyebrow">FEATURED PROJECTS</span>
 
@@ -343,363 +342,124 @@
     <!-- PROJECT GRID -->
 
 
-<div class="projects-grid">
-
-  <!-- 01. HASTINGS SEAMLESS GUTTERS -->
 
 
 
-  <!-- 28. ALL PHASE REMODELING -->
-  <article class="project-card">
-    <a href="https://www.allphaseremodelingandbuilding.com/" target="_blank" rel="noopener noreferrer" class="project-image">
-      <img src="assets/All Phase Remodeling & Building LLC.jpg" alt="All Phase Remodeling and Building">
-      <span class="project-view">View Project ↗</span>
+    <div class="projects-grid" id="projectsGrid"></div>
+
+
+
+<script>
+const projects = [
+  {
+    name: "All Phase Remodeling & Building",
+    category: "Home Improvement",
+    url: "https://www.allphaseremodelingandbuilding.com/",
+    image: "assets/All Phase Remodeling & Building LLC.jpg",
+    alt: "All Phase Remodeling and Building"
+  },
+  {
+    name: "Indian River Softwash",
+    category: "Exterior Cleaning",
+    url: "https://www.indianriversoftwash.com/",
+    image: "assets/Indian River Softwash.jpg",
+    alt: "Indian River Softwash"
+  },
+  {
+    name: "Human Development Systems",
+    category: "Fitness & Wellness",
+    url: "https://www.humandevelopmentsystems.com/",
+    image: "assets/Human Development Systems.jpg",
+    alt: "Human Development Systems"
+  },
+    {
+    name: "American Water Solutions",
+    category: "Water Treatment Solutions",
+    url: "https://www.americanwatersolutions.net/",
+    image: "assets/ADD-American-Water-Solutions.jpg",
+    alt: "American Water Solutions"
+  },
+     {
+    name: "Widco Transmission",
+    category: "Automotive Services",
+    url: "https://www.widcotransmission.com/",
+    image: "assets/ADD-Widco-Transmission.jpg",
+    alt: "Widco Transmission"
+  },
+    {
+    name: "The Wallpaper Wizard",
+    category: "Wallpaper Installation",
+    url: "https://www.thewallpaperwizard.com/",
+    image: "assets/The Wallpaper Wizard.jpg",
+    alt: "The Wallpaper Wizard"
+  },
+
+];
+
+const projectsGrid = document.getElementById("projectsGrid");
+
+projectsGrid.innerHTML = projects.map((project, index) => `
+  <article class="project-item">
+
+    <a
+      href="${project.url}"
+      class="laptop-link"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="View ${project.name} website"
+    >
+
+      <div class="laptop">
+
+        <div class="laptop-screen">
+          <div class="screen-content">
+            <img
+              src="${project.image}"
+              alt="${project.alt}"
+              loading="${index < 3 ? 'eager' : 'lazy'}"
+            >
+          </div>
+        </div>
+
+        <div class="laptop-base">
+          <span></span>
+        </div>
+
+      </div>
+
     </a>
-    <div class="project-info"><div class="project-heading">
-      <div><h3>All Phase Remodeling &amp; Building</h3><p>Home Improvement</p></div>
-    </div></div>
+
+    <div class="project-info">
+      <h3>${project.name}</h3>
+      <p>${project.category}</p>
+     
+    </div>
+
   </article>
+`).join("");
+</script>
 
-  <!-- 29. INDIAN RIVER SOFTWASH -->
-  <article class="project-card">
-    <a href="https://www.indianriversoftwash.com/" target="_blank" rel="noopener noreferrer" class="project-image">
-      <img src="assets/Indian River Softwash.jpg" alt="Indian River Softwash">
-      <span class="project-view">View Project ↗</span>
-    </a>
-    <div class="project-info"><div class="project-heading">
-      <div><h3>Indian River Softwash</h3><p>Exterior Cleaning</p></div>
-    </div></div>
-  </article>
+<!-- VIEW MORE PROJECTS -->
 
-  <!-- 30. HUMAN DEVELOPMENT SYSTEMS -->
-  <article class="project-card">
-    <a href="https://www.humandevelopmentsystems.com/" target="_blank" rel="noopener noreferrer" class="project-image">
-      <img src="assets/Human Development Systems.jpg" alt="Human Development Systems">
-      <span class="project-view">View Project ↗</span>
-    </a>
-    <div class="project-info"><div class="project-heading">
-      <div><h3>Human Development Systems</h3><p>Fitness &amp; Wellness</p></div>
-    </div></div>
-  </article>
-
-
-
-  <article class="project-card">
-    <a href="https://www.hastingsseamlessguttersne.com/" target="_blank" rel="noopener noreferrer" class="project-image">
-      <img src="assets/ADD-Hastings-Seamless-Gutters.jpg" alt="Hastings Seamless Gutters">
-      <span class="project-view">View Project ↗</span>
-    </a>
-    <div class="project-info"><div class="project-heading">
-      <div><h3>Hastings Seamless Gutters</h3><p>Gutter Installation</p></div>
-    </div></div>
-  </article>
-
-  <!-- 02. PROCHECK RADON -->
-  <article class="project-card">
-    <a href="https://www.procheckradon.com/" target="_blank" rel="noopener noreferrer" class="project-image">
-      <img src="assets/project-procheck-radon(1).jpg" alt="ProCheck Radon Systems">
-      <span class="project-view">View Project ↗</span>
-    </a>
-    <div class="project-info"><div class="project-heading">
-      <div><h3>ProCheck Radon Systems</h3><p>Radon Mitigation</p></div>
-    </div></div>
-  </article>
-
-  <!-- 03. HDC ROOFING -->
-  <article class="project-card">
-    <a href="https://www.hdcroofingcorporation.com/" target="_blank" rel="noopener noreferrer" class="project-image">
-      <img src="assets/project-hdc-roofing.jpg" alt="HDC Roofing">
-      <span class="project-view">View Project ↗</span>
-    </a>
-    <div class="project-info"><div class="project-heading">
-      <div><h3>HDC Roofing</h3><p>Roofing &amp; Exterior Services</p></div>
-    </div></div>
-  </article>
-
-  <!-- 04. CREATIVE HARDSCAPES -->
-  <article class="project-card">
-    <a href="https://www.creativehardscapesca.com/" target="_blank" rel="noopener noreferrer" class="project-image">
-      <img src="assets/project-creative-hardscapes.jpg" alt="Creative Hardscapes">
-      <span class="project-view">View Project ↗</span>
-    </a>
-    <div class="project-info"><div class="project-heading">
-      <div><h3>Creative Hardscapes</h3><p>Landscape &amp; Outdoor Design</p></div>
-    </div></div>
-  </article>
-
-  <!-- 05. RICE CUSTOM CABINETRY -->
-  <article class="project-card">
-    <a href="https://www.ricecustomcabinetry.com/" target="_blank" rel="noopener noreferrer" class="project-image">
-      <img src="assets/project-rice-cabinetry.jpg" alt="Rice Custom Cabinetry">
-      <span class="project-view">View Project ↗</span>
-    </a>
-    <div class="project-info"><div class="project-heading">
-      <div><h3>Rice Custom Cabinetry</h3><p>Custom Cabinetry &amp; Furniture</p></div>
-    </div></div>
-  </article>
-
-  <!-- 06. GRANDPA'S HOUSE -->
-  <article class="project-card">
-    <a href="https://www.grandpashousellc.com/" target="_blank" rel="noopener noreferrer" class="project-image">
-      <img src="assets/project-grandpas-house.jpg" alt="Grandpa's House LLC">
-      <span class="project-view">View Project ↗</span>
-    </a>
-    <div class="project-info"><div class="project-heading">
-      <div><h3>Grandpa's House LLC</h3><p>Senior Relocation Services</p></div>
-    </div></div>
-  </article>
-
-  <!-- 07. AMERICAN WATER SOLUTIONS -->
-  <article class="project-card">
-    <a href="https://www.americanwatersolutions.net/" target="_blank" rel="noopener noreferrer" class="project-image">
-      <img src="assets/ADD-American-Water-Solutions.jpg" alt="American Water Solutions">
-      <span class="project-view">View Project ↗</span>
-    </a>
-    <div class="project-info"><div class="project-heading">
-      <div><h3>American Water Solutions</h3><p>Water Treatment Solutions</p></div>
-    </div></div>
-  </article>
-
-  <!-- 08. XTREME CRS -->
-  <article class="project-card">
-    <a href="https://www.xtremecrs.com/" target="_blank" rel="noopener noreferrer" class="project-image">
-      <img src="assets/ADD-Xtreme-CRS.jpg" alt="Xtreme CRS">
-      <span class="project-view">View Project ↗</span>
-    </a>
-    <div class="project-info"><div class="project-heading">
-      <div><h3>Xtreme CRS</h3><p>Business Services</p></div>
-    </div></div>
-  </article>
-
-  <!-- 09. GREENVILLE ELECTRICIAN -->
-  <article class="project-card">
-    <a href="https://www.greenville-electrician.com/" target="_blank" rel="noopener noreferrer" class="project-image">
-      <img src="assets/ADD-Greenville-Electrician.jpg" alt="Greenville Electrician">
-      <span class="project-view">View Project ↗</span>
-    </a>
-    <div class="project-info"><div class="project-heading">
-      <div><h3>Greenville Electrician</h3><p>Electrical Services</p></div>
-    </div></div>
-  </article>
-
-  <!-- 10. SALT LAKE DECK BUILDERS -->
-  <article class="project-card">
-    <a href="https://www.saltlakedeckbuilders.com/" target="_blank" rel="noopener noreferrer" class="project-image">
-      <img src="assets/ADD-Salt-Lake-Deck-Builders.jpg" alt="Salt Lake Deck Builders">
-      <span class="project-view">View Project ↗</span>
-    </a>
-    <div class="project-info"><div class="project-heading">
-      <div><h3>Salt Lake Deck Builders</h3><p>Deck Construction</p></div>
-    </div></div>
-  </article>
-
-  <!-- 11. PREMIER ROOFING -->
-  <article class="project-card">
-    <a href="https://www.premierroofingofmidmich.com/" target="_blank" rel="noopener noreferrer" class="project-image">
-      <img src="assets/ADD-Premier-Roofing-Mid-Mich.jpg" alt="Premier Roofing of Mid Michigan">
-      <span class="project-view">View Project ↗</span>
-    </a>
-    <div class="project-info"><div class="project-heading">
-      <div><h3>Premier Roofing of Mid Michigan</h3><p>Roofing Services</p></div>
-    </div></div>
-  </article>
-
-  <!-- 12. MAVERICKS HI -->
-  <article class="project-card">
-    <a href="https://www.maverickshi.com/" target="_blank" rel="noopener noreferrer" class="project-image">
-      <img src="assets/ADD-Mavericks-HI.jpg" alt="Mavericks Home Improvement">
-      <span class="project-view">View Project ↗</span>
-    </a>
-    <div class="project-info"><div class="project-heading">
-      <div><h3>Mavericks HI</h3><p>Home Improvement</p></div>
-    </div></div>
-  </article>
-
-  <!-- 13. WIDCO TRANSMISSION -->
-  <article class="project-card">
-    <a href="https://www.widcotransmission.com/" target="_blank" rel="noopener noreferrer" class="project-image">
-      <img src="assets/ADD-Widco-Transmission.jpg" alt="Widco Transmission">
-      <span class="project-view">View Project ↗</span>
-    </a>
-    <div class="project-info"><div class="project-heading">
-      <div><h3>Widco Transmission</h3><p>Automotive Services</p></div>
-    </div></div>
-  </article>
-
-  <!-- 14. MONTROSE SPORTING GOODS -->
-  <article class="project-card">
-    <a href="https://www.montrosesportinggoods.com/" target="_blank" rel="noopener noreferrer" class="project-image">
-      <img src="assets/project-montrose-sporting-goods.jpg" alt="Montrose Sporting Goods">
-      <span class="project-view">View Project ↗</span>
-    </a>
-    <div class="project-info"><div class="project-heading">
-      <div><h3>Montrose Sporting Goods</h3><p>Retail &amp; Sporting Goods</p></div>
-    </div></div>
-  </article>
-
-  <!-- 15. DANIEL KATZ REAL ESTATE -->
-  <article class="project-card">
-    <a href="https://www.danielkatzrealestate.com/" target="_blank" rel="noopener noreferrer" class="project-image">
-      <img src="assets/ADD-Daniel-Katz-Real-Estate.jpg" alt="Daniel Katz Real Estate">
-      <span class="project-view">View Project ↗</span>
-    </a>
-    <div class="project-info"><div class="project-heading">
-      <div><h3>Daniel Katz Real Estate</h3><p>Real Estate</p></div>
-    </div></div>
-  </article>
-
-  <!-- 16. MODERN BUILD RVA -->
-  <article class="project-card">
-    <a href="https://www.modernbuildrva.com/" target="_blank" rel="noopener noreferrer" class="project-image">
-      <img src="assets/ADD-Modern-Build-RVA.jpg" alt="Modern Build RVA">
-      <span class="project-view">View Project ↗</span>
-    </a>
-    <div class="project-info"><div class="project-heading">
-      <div><h3>Modern Build RVA</h3><p>Construction &amp; Remodeling</p></div>
-    </div></div>
-  </article>
-
-  <!-- 17. SHOE REPAIR EUGENE -->
-  <article class="project-card">
-    <a href="https://www.shoerepaireugene.com/" target="_blank" rel="noopener noreferrer" class="project-image">
-      <img src="assets/ADD-Shoe-Repair-Eugene.jpg" alt="Shoe Repair Eugene">
-      <span class="project-view">View Project ↗</span>
-    </a>
-    <div class="project-info"><div class="project-heading">
-      <div><h3>Shoe Repair Eugene</h3><p>Shoe Repair Services</p></div>
-    </div></div>
-  </article>
-
-  <!-- 18. EXTREME AUDIO TX -->
-  <article class="project-card">
-    <a href="https://www.extremeaudiotx.com/" target="_blank" rel="noopener noreferrer" class="project-image">
-      <img src="assets/ADD-Extreme-Audio-TX.jpg" alt="Extreme Audio TX">
-      <span class="project-view">View Project ↗</span>
-    </a>
-    <div class="project-info"><div class="project-heading">
-      <div><h3>Extreme Audio TX</h3><p>Automotive Audio</p></div>
-    </div></div>
-  </article>
-
-  <!-- 19. CHARLIE'S LAWN & LANDSCAPING -->
-  <article class="project-card">
-    <a href="https://www.charlieslawnandlandscaping.com/" target="_blank" rel="noopener noreferrer" class="project-image">
-      <img src="assets/ADD-Charlies-Lawn-Landscaping.jpg" alt="Charlie's Lawn and Landscaping">
-      <span class="project-view">View Project ↗</span>
-    </a>
-    <div class="project-info"><div class="project-heading">
-      <div><h3>Charlie's Lawn &amp; Landscaping</h3><p>Lawn &amp; Landscaping</p></div>
-    </div></div>
-  </article>
-
-  <!-- 20. PENSACOLA LAWN SPECIALISTS -->
-  <article class="project-card">
-    <a href="https://www.pensacolalawnspecialists.com/" target="_blank" rel="noopener noreferrer" class="project-image">
-      <img src="assets/ADD-Pensacola-Lawn-Specialists.jpg" alt="Pensacola Lawn Specialists">
-      <span class="project-view">View Project ↗</span>
-    </a>
-    <div class="project-info"><div class="project-heading">
-      <div><h3>Pensacola Lawn Specialists</h3><p>Lawn Care Services</p></div>
-    </div></div>
-  </article>
-
-  <!-- 21. THE CTP EXPERIENCE -->
-  <article class="project-card">
-    <a href="https://www.createthatparty.com/" target="_blank" rel="noopener noreferrer" class="project-image">
-      <img src="assets/project-ctp-experience(1).jpg" alt="The CTP Experience">
-      <span class="project-view">View Project ↗</span>
-    </a>
-    <div class="project-info"><div class="project-heading">
-      <div><h3>The CTP Experience</h3><p>Event Planning</p></div>
-    </div></div>
-  </article>
-
-  <!-- 22. TORO HOME REMODELING -->
-  <article class="project-card">
-    <a href="https://www.torohomeremodeling.com/" target="_blank" rel="noopener noreferrer" class="project-image">
-      <img src="assets/ADD-Toro-Home-Remodeling.jpg" alt="Toro Home Remodeling">
-      <span class="project-view">View Project ↗</span>
-    </a>
-    <div class="project-info"><div class="project-heading">
-      <div><h3>Toro Home Remodeling</h3><p>Home Remodeling</p></div>
-    </div></div>
-  </article>
-
-  <!-- 23. MONROE COMMERCIAL CLEANING -->
-  <article class="project-card">
-    <a href="https://www.monroecommercialcleaning.com/" target="_blank" rel="noopener noreferrer" class="project-image">
-      <img src="assets/ADD-Monroe-Commercial-Cleaning.jpg" alt="Monroe Commercial Cleaning">
-      <span class="project-view">View Project ↗</span>
-    </a>
-    <div class="project-info"><div class="project-heading">
-      <div><h3>Monroe Commercial Cleaning</h3><p>Commercial Cleaning</p></div>
-    </div></div>
-  </article>
-
-  <!-- 24. VALKNUT AIRSOFT -->
-  <article class="project-card">
-    <a href="https://www.valknutairsoft.com/" target="_blank" rel="noopener noreferrer" class="project-image">
-      <img src="assets/project-valknut-airsoft.jpg" alt="Valknut Airsoft">
-      <span class="project-view">View Project ↗</span>
-    </a>
-    <div class="project-info"><div class="project-heading">
-      <div><h3>Valknut Airsoft</h3><p>Airsoft &amp; Recreation</p></div>
-    </div></div>
-  </article>
-
-  <!-- 25. ARGYLE & STEPHEN BUILDERS SUPPLY -->
-  <article class="project-card">
-    <a href="https://www.argyleandstephenbuilderssupply.com/" target="_blank" rel="noopener noreferrer" class="project-image">
-      <img src="assets/Argyle Builders Supply Stephen Builders Supply(3).jpg" alt="Argyle and Stephen Builders Supply">
-      <span class="project-view">View Project ↗</span>
-    </a>
-    <div class="project-info"><div class="project-heading">
-      <div><h3>Argyle &amp; Stephen Builders Supply</h3><p>Construction Supply</p></div>
-    </div></div>
-  </article>
-
-  <!-- 26. THE WALLPAPER WIZARD -->
-  <article class="project-card">
-    <a href="https://www.thewallpaperwizard.com/" target="_blank" rel="noopener noreferrer" class="project-image">
-      <img src="assets/The Wallpaper Wizard.jpg" alt="The Wallpaper Wizard">
-      <span class="project-view">View Project ↗</span>
-    </a>
-    <div class="project-info"><div class="project-heading">
-      <div><h3>The Wallpaper Wizard</h3><p>Wallpaper Installation</p></div>
-    </div></div>
-  </article>
-
-  <!-- 27. MSG HOME IMPROVEMENT -->
-  <article class="project-card">
-    <a href="https://www.msghomeimprovement.com/" target="_blank" rel="noopener noreferrer" class="project-image">
-      <img src="assets/MSG Home Improvement LLC.jpg" alt="MSG Home Improvement LLC">
-      <span class="project-view">View Project ↗</span>
-    </a>
-    <div class="project-info"><div class="project-heading">
-      <div><h3>MSG Home Improvement</h3><p>Home Remodeling</p></div>
-    </div></div>
-  </article>
 
 
 
 </div>
 
-  
 
-   
-
-
-<div class="projects-load-more">
-  <button id="viewMoreProjects" class="view-more-btn" type="button">
-    View More Projects
-    <span>↓</span>
-  </button>
+<div class="projects-view-more">
+    <a href="project.html" class="btn-primary">View More Projects</a>
 </div>
 
 
 
 
 </section>
+
+
+
+
+
 
 
 <!-- =================  TOOLS & PLATFORMS ================= -->
@@ -1166,6 +926,82 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 </script>
+
+
+
+
+<script>
+// AUTOMATIC WEBSITE SCREENSHOT SCROLL
+
+function initializeWebsiteScroll() {
+
+  const laptops = document.querySelectorAll(".laptop-link");
+
+  laptops.forEach(laptop => {
+
+    const viewport = laptop.querySelector(".screen-content");
+    const image = viewport.querySelector("img");
+
+    function calculateScroll() {
+
+      if (!image.complete || !image.naturalWidth) return;
+
+      // Calculate the full screenshot height
+      const imageHeight = image.getBoundingClientRect().height;
+
+      // Calculate visible laptop screen height
+      const viewportHeight = viewport.clientHeight;
+
+      // Calculate available scrolling distance
+      const scrollDistance = Math.max(
+        0,
+        imageHeight - viewportHeight
+      );
+
+      // Set scrolling distance
+      image.style.setProperty(
+        "--scroll-distance",
+        `-${scrollDistance}px`
+      );
+
+      // Adjust animation speed based on screenshot length
+      const duration = Math.max(3, scrollDistance / 100);
+
+      image.style.setProperty(
+        "--scroll-duration",
+        `${duration}s`
+      );
+    }
+
+    if (image.complete) {
+      requestAnimationFrame(calculateScroll);
+    } else {
+      image.addEventListener("load", calculateScroll, {
+        once: true
+      });
+    }
+
+    // Recalculate when laptop dimensions change
+    if ("ResizeObserver" in window) {
+      const observer = new ResizeObserver(calculateScroll);
+      observer.observe(viewport);
+      observer.observe(image);
+    }
+
+  });
+
+}
+
+// Initialize after project cards are generated
+initializeWebsiteScroll();
+
+
+</script>
+
+
+
+
+
 
 
 
