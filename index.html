@@ -1076,23 +1076,43 @@
       revealItems.forEach(item => revealObserver.observe(item));
     }
 
-    const navLinks = document.querySelectorAll('.main-nav a[href^="#"]');
-    const sections = [...navLinks]
-      .map(link => document.querySelector(link.getAttribute('href')))
-      .filter(Boolean);
+ 
+/* =========================================
+   ACTIVE NAVIGATION ON SCROLL
+========================================= */
 
-    const navObserver = new IntersectionObserver(entries => {
-      const visibleSection = entries
-        .filter(entry => entry.isIntersecting)
-        .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
-      if (!visibleSection) return;
+const navLinks = document.querySelectorAll('.main-nav a[href^="#"]');
 
-      navLinks.forEach(link => {
-        link.classList.toggle('active', link.getAttribute('href') === `#${visibleSection.target.id}`);
-      });
-    }, { threshold: 0.35, rootMargin: '-80px 0px -45%' });
+const sections = [...navLinks]
+  .map(link => {
+    const target = link.getAttribute('href');
+    return document.querySelector(target);
+  })
+  .filter(Boolean);
 
-    sections.forEach(section => navObserver.observe(section));
+const navObserver = new IntersectionObserver(entries => {
+
+  const visibleSections = entries
+    .filter(entry => entry.isIntersecting)
+    .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+
+  if (!visibleSections.length) return;
+
+  const activeSection = visibleSections[0].target.id;
+
+  navLinks.forEach(link => {
+    const isActive = link.getAttribute('href') === `#${activeSection}`;
+
+    link.classList.toggle('active', isActive);
+  });
+
+}, {
+  threshold: [0.1, 0.25, 0.35, 0.5],
+  rootMargin: '-80px 0px -45% 0px'
+});
+
+sections.forEach(section => navObserver.observe(section));
+
 
     document.querySelectorAll('.btn-primary, .btn-outline, .header-cta, .projects-button').forEach(button => {
       button.addEventListener('pointerdown', () => button.classList.add('is-pressed'));
