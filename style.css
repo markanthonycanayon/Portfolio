@@ -359,8 +359,8 @@ input {
 }
 
 .tool-icon {
-    width: 42px;
-    height: 42px;
+    width: 60px;
+    height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -998,8 +998,8 @@ input {
 /* Icon */
 
 .tool-icon {
-  width: 90px;
-  height: 90px;
+  width: 60px;
+  height: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -3386,8 +3386,8 @@ input:focus-visible + .menu-icon {
 /* ORANGE ICON */
 
 .tool-icon {
-    width: 88px;
-    height: 88px;
+    width: 70px;
+    height: 70px;
     margin-top: -20px;
     margin-bottom: 35px;
     display: flex;
