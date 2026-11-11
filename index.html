@@ -488,7 +488,8 @@ projectsGrid.innerHTML = projects.map((project, index) => `
     <div class="tools-grid">
 
       <!-- Website Builders -->
-      <article class="tool-card">
+     
+ <article class="tool-card">
         <div class="tool-icon">
           <svg viewBox="0 0 24 24" fill="none"
             stroke="currentColor" stroke-width="1.8"
@@ -499,17 +500,21 @@ projectsGrid.innerHTML = projects.map((project, index) => `
         </div>
 
         <h3>Website Builders</h3>
-        <span class="tool-divider"></span>
+      
 
         <p>Build, design, and manage responsive websites.</p>
 
-        <div class="tool-brands">
-          <span class="brand duda">Duda</span>
-          <span class="brand wordpress">
-            <span class="wp-symbol">W</span>
-            WordPress
-          </span>
-        </div>
+         <div class="brand-list website-brands">
+                    <div class="brand duda-brand">
+                        <span>duda</span>
+                    </div>
+
+                    <div class="brand wordpress-brand">
+                        <img src="https://cdn.simpleicons.org/wordpress/21759B"
+                             alt="WordPress">
+                        <span>WordPress</span>
+                    </div>
+                </div>
       </article>
 
       <!-- Design Tools -->
@@ -525,14 +530,23 @@ projectsGrid.innerHTML = projects.map((project, index) => `
         </div>
 
         <h3>Design Tools</h3>
-        <span class="tool-divider"></span>
+       
 
         <p>Create and enhance visual assets for the web.</p>
 
-        <div class="tool-brands">
-          <span class="brand adobe ps">Ps</span>
-          <span class="brand adobe ai">Ai</span>
-        </div>
+      <div class="brand-list design-brands">
+    <div class="adobe-tool photoshop">
+        <img src="assets/Photoshop.png"
+             alt="Adobe Photoshop">
+      
+    </div>
+
+    <div class="adobe-tool illustrator">
+        <img src="assets/Illustrator.png"
+             alt="Adobe Illustrator">
+        
+    </div>
+</div>
       </article>
 
       <!-- AI Tools -->
@@ -547,15 +561,28 @@ projectsGrid.innerHTML = projects.map((project, index) => `
         </div>
 
         <h3>AI Tools</h3>
-        <span class="tool-divider"></span>
+     
 
         <p>Boost productivity, creativity, and workflow with AI.</p>
 
-        <div class="tool-brands ai-brands">
-          <span class="brand copilot">Duda<br>Copilot</span>
-          <span class="brand chatgpt">ChatGPT</span>
-          <span class="brand gemini">Gemini</span>
-        </div>
+         <div class="brand-list ai-brands">
+                    <div class="brand duda-copilot">
+                        <img src="assets/Duda Copilot Sparkle Logo.png"
+                             alt="ChatGPT">
+                    </div>
+
+                    <div class="brand chatgpt-brand">
+                        <img src="assets/ChatGPT.png"
+                             alt="ChatGPT">
+                       
+                    </div>
+
+                    <div class="brand gemini-brand">
+                        <img src="https://cdn.simpleicons.org/googlegemini/8AB4F8"
+                             alt="Gemini">
+                        <span>Gemini</span>
+                    </div>
+                </div>
       </article>
 
       <!-- Project Management -->
@@ -570,16 +597,17 @@ projectsGrid.innerHTML = projects.map((project, index) => `
         </div>
 
         <h3>Project Management</h3>
-        <span class="tool-divider"></span>
+  
 
         <p>Plan, track, and manage web projects efficiently.</p>
 
-        <div class="tool-brands">
-          <span class="brand monday">
-            <span class="monday-mark">● ● ●</span>
-            monday.com
-          </span>
-        </div>
+       <div class="brand-list single-brand">
+                    <div class="brand monday-brand">
+                        <img src="assets/monday.png"
+                             alt="monday.com">
+                      
+                    </div>
+                </div>
       </article>
 
       <!-- CRM -->
@@ -595,13 +623,17 @@ projectsGrid.innerHTML = projects.map((project, index) => `
         </div>
 
         <h3>CRM &amp; Business Tools</h3>
-        <span class="tool-divider"></span>
+       
 
         <p>Manage client relationships and business operations.</p>
 
-        <div class="tool-brands">
-          <span class="brand salesforce">salesforce</span>
-        </div>
+      <div class="brand-list single-brand">
+                    <div class="brand salesforce-brand">
+                        <img src="assets/Bright Blue Salesforce Cloud Logo.png"
+                             alt="Salesforce">
+                      
+                    </div>
+                </div>
       </article>
 
     </div>
@@ -997,6 +1029,19 @@ initializeWebsiteScroll();
 
 
 </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
