@@ -1024,7 +1024,7 @@ input {
   align-items: center;
   justify-content: center;
   margin: 0;
-  font-size: 23px;
+  font-size: 20px;
   line-height: 1.2;
   font-weight: 800;
   color: #ffffff;
@@ -1121,11 +1121,7 @@ input {
 }
 
 .copilot {
-  padding: 12px;
-  background: #753080;
-  color: #ffffff;
-  border-radius: 12px;
-  font-size: 16px;
+
 }
 
 .chatgpt {
@@ -1150,15 +1146,7 @@ input {
   letter-spacing: -5px;
 }
 
-.salesforce {
-  width: 145px;
-  height: 80px;
-  border-radius: 50%;
-  background: #079ddd;
-  color: #ffffff;
-  font-size: 19px;
-  font-style: italic;
-}
+
 
 /* ========================================
    TABLET RESPONSIVE
@@ -1289,9 +1277,7 @@ input {
     font-size: 18px;
   }
 
-  .monday {
-    font-size: 15px;
-  }
+
 
   .salesforce {
     width: 110px;
@@ -3317,6 +3303,349 @@ input:focus-visible + .menu-icon {
 
 }
 
+
+
+/* ==============================
+   TOOLS & PLATFORMS
+============================== */
+
+.tools-section {
+    position: relative;
+    overflow: hidden;
+    padding: 75px 65px;
+    background:
+        radial-gradient(circle at 5% 15%, rgba(255, 87, 15, .10), transparent 30%),
+        radial-gradient(circle at 95% 90%, rgba(255, 87, 15, .10), transparent 30%),
+        #101010;
+    color: #fff;
+}
+
+.tools-container {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.tools-heading {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 65px;
+}
+
+.tools-heading .eyebrow {
+    color: #ff570f;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.tools-heading h2 {
+    font-size: 36px;
+    font-weight: 800;
+    margin: 12px 0;
+}
+
+.tools-heading p {
+    color: #bdbdbd;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+/* GRID */
+
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 20px;
+}
+
+/* CARDS */
+
+.tool-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-width: 0;
+    padding: 0 20px 25px;
+    border: 1px solid rgba(255,255,255,.18);
+    border-radius: 20px;
+    background: linear-gradient(
+        145deg,
+        rgba(255,255,255,.045),
+        rgba(255,255,255,.012)
+    );
+    transition: .3s ease;
+}
+
+.tool-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(255,87,15,.65);
+    box-shadow: 0 15px 35px rgba(0,0,0,.25);
+}
+
+/* ORANGE ICON */
+
+.tool-icon {
+    width: 88px;
+    height: 88px;
+    margin-top: -20px;
+    margin-bottom: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 22px;
+    background: #ff570f;
+    color: #fff;
+    font-size: 42px;
+    box-shadow: 0 10px 25px rgba(255,87,15,.2);
+}
+
+.tool-card h3 {
+    color: #fff;
+    font-size: 19px;
+    font-weight: 800;
+    margin: 0 0 15px;
+}
+
+.tool-card > p {
+    color: #d0d0d0;
+    font-size: 15px;
+    line-height: 1.55;
+    min-height: 48px;
+    margin: 0 0 30px;
+}
+
+/* LOGO AREA - NO WHITE BACKGROUND */
+
+.brand-list {
+    width: 100%;
+ 
+   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+/* WEBSITE BUILDERS */
+
+.website-brands {
+    flex-direction: column;
+    gap: 15px;
+}
+
+.duda-brand {
+    color: #fff;
+    background: #ff570f;
+    padding: 8px 18px;
+    border-radius: 9px;
+    font-size: 28px;
+    font-weight: 800;
+    line-height: 1.1;
+}
+
+.wordpress-brand img {
+    width: 38px;
+    height: 38px;
+}
+
+.wordpress-brand span {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+/* ADOBE DESIGN TOOLS */
+
+.design-brands {
+    gap: 25px;
+}
+
+.adobe-brand {
+    width: 68px;
+    height: 68px;
+    border-radius: 13px;
+    font-size: 34px;
+    font-weight: 700;
+}
+
+
+
+
+
+/* AI TOOLS */
+
+.ai-brands {
+    gap: 13px;
+    row-gap: 16px;
+}
+
+.duda-copilot {
+ 
+}
+
+.duda-copilot img {
+    width: 100%;
+    height: 60px;
+}
+
+
+
+.chatgpt-brand img {
+    width: 100%;
+    height: 50px;
+}
+
+.chatgpt-brand span {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.gemini-brand {
+    flex-basis: 100%;
+    gap: 8px;
+}
+
+.gemini-brand img {
+    width: 32px;
+    height: 32px;
+}
+
+.gemini-brand span {
+    color: #8ab4f8;
+    font-size: 27px;
+    font-weight: 600;
+}
+
+/* MONDAY.COM */
+
+.monday-brand {
+    gap: 9px;
+}
+
+.monday-brand img {
+    width: 100%;
+   
+}
+
+.monday-brand span {
+    color: #fff;
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+/* SALESFORCE */
+
+
+
+/* TABLET */
+
+@media (max-width: 1100px) {
+    .tools-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .tools-section {
+        padding: 70px 35px;
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 767px) {
+    .tools-section {
+        padding: 60px 20px;
+    }
+
+    .tools-heading {
+        margin-bottom: 50px;
+    }
+
+    .tools-heading h2 {
+        font-size: 28px;
+    }
+
+    .tools-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 35px 15px;
+    }
+
+    .tool-card {
+        padding: 0 12px 22px;
+    }
+
+    .tool-icon {
+        width: 65px;
+        height: 65px;
+        font-size: 32px;
+        margin-bottom: 28px;
+    }
+
+    .tool-card h3 {
+        font-size: 16px;
+    }
+
+    .tool-card > p {
+        font-size: 13px;
+        min-height: 60px;
+    }
+
+    .brand-list {
+     
+        gap: 12px;
+    }
+
+    .wordpress-brand span {
+        font-size: 15px;
+    }
+
+    .adobe-brand {
+        width: 52px;
+        height: 52px;
+        font-size: 27px;
+    }
+
+    .chatgpt-brand span {
+        font-size: 13px;
+    }
+
+    .gemini-brand span {
+        font-size: 21px;
+    }
+
+    .monday-brand span {
+        font-size: 18px;
+    }
+
+  
+}
+
+@media (max-width: 420px) {
+    .tools-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .tool-card {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    .tool-card > p {
+        min-height: auto;
+    }
+}
 
 
 
