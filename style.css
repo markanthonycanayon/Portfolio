@@ -613,11 +613,7 @@ input {
     display: grid;
     place-items: center;
 
-    background: rgba(255, 85, 0, 0.12);
-    border: 1px solid rgba(255, 85, 0, 0.18);
 
-    border-radius: 13px;
-    margin-bottom: 20px;
 }
 
 .service-icon img {
@@ -627,8 +623,7 @@ input {
 }
 
 .featured .service-icon {
-    background: rgba(255, 85, 0, 0.18);
-    border-color: rgba(255, 85, 0, 0.35);
+  
 }
 
 /* SERVICE TITLES */
@@ -3419,8 +3414,6 @@ input:focus-visible + .menu-icon {
 
 .brand-list {
     width: 100%;
- 
-   
     display: flex;
     align-items: center;
     justify-content: center;
@@ -3537,7 +3530,7 @@ input:focus-visible + .menu-icon {
 }
 
 .monday-brand img {
-    width: 100%;
+    width: 85%;
    
 }
 
@@ -3596,16 +3589,16 @@ input:focus-visible + .menu-icon {
     }
 
     .tool-card h3 {
-        font-size: 16px;
+        font-size: 20px;
     }
 
     .tool-card > p {
         font-size: 13px;
-        min-height: 60px;
+        min-height: 10px;
     }
 
     .brand-list {
-     
+    width: 50%;
         gap: 12px;
     }
 
@@ -3706,8 +3699,7 @@ input:focus-visible + .menu-icon {
     }
 
     .brand-item img {
-        width: 36px;
-        height: 36px;
+     
     }
 
     .brand-item span {
