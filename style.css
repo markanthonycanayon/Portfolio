@@ -298,7 +298,7 @@ input {
 
 .hero-stats small {
     display: block;
-    font-size: 11px;
+    font-size: 14px;
     color: #ddd;
 }
 
@@ -353,7 +353,7 @@ input {
 }
 
 .tools-list > span {
-    font-size: 11px;
+    font-size: 14px;
     margin-right: 5px;
     white-space: nowrap;
 }
@@ -613,7 +613,11 @@ input {
     display: grid;
     place-items: center;
 
+    background: rgba(255, 85, 0, 0.12);
+    border: 1px solid rgba(255, 85, 0, 0.18);
 
+    border-radius: 13px;
+    margin-bottom: 20px;
 }
 
 .service-icon img {
@@ -623,7 +627,8 @@ input {
 }
 
 .featured .service-icon {
-  
+    background: rgba(255, 85, 0, 0.18);
+    border-color: rgba(255, 85, 0, 0.35);
 }
 
 /* SERVICE TITLES */
@@ -746,7 +751,7 @@ input {
     gap: 18px;
     align-items: flex-start;
     padding-bottom: 20px;
-    border-bottom: 1px solid #eeeeee;
+
 }
 
 .feature-icon {
@@ -769,7 +774,7 @@ input {
 
 .feature-item p {
     font-size: 12px;
-    color: #777777;
+    color: #666666;
     line-height: 1.6;
 }
 
@@ -947,7 +952,7 @@ input {
 
 .tools-heading p {
 
-  margin: 0 auto;
+ 
   font-size: 16px;
   line-height: 1.6;
   color: #d0d0d0;
@@ -1703,8 +1708,7 @@ input {
 
 .footer-links,
 .footer-contact,
-.footer-social {
-    border-left: 1px solid #444;
+
     padding-left: 25px;
 }
 
@@ -2199,12 +2203,12 @@ input {
     .experience-intro p,
     .contact-inner p,
     .footer-brand p {
-        font-size: 16px;
+        font-size: 15px;
         line-height: 2;
     }
 
     .experience-item li {
-        font-size: 16px;
+        font-size: 15px;
         line-height: 2;
     }
 }
@@ -2462,7 +2466,7 @@ html {
 
 .projects-heading p {
   color: #59616b;
-  font-size: 18px;
+  font-size: 16px;
   margin: 0;
 }
 
@@ -2580,7 +2584,7 @@ html {
 
 .project-info p {
   color: #59616b;
-  font-size: 16px;
+  font-size: 15px;
   line-height: 1.5;
   margin: 0;
 }
@@ -3321,7 +3325,7 @@ input:focus-visible + .menu-icon {
 
 .tools-heading {
     text-align: center;
-    max-width: 750px;
+    max-width: 75%;
     margin: 0 auto 65px;
 }
 
@@ -3340,7 +3344,7 @@ input:focus-visible + .menu-icon {
 
 .tools-heading p {
     color: #bdbdbd;
-    font-size: 15px;
+ 
     line-height: 1.7;
 }
 
@@ -3414,6 +3418,8 @@ input:focus-visible + .menu-icon {
 
 .brand-list {
     width: 100%;
+ 
+   
     display: flex;
     align-items: center;
     justify-content: center;
@@ -3530,7 +3536,7 @@ input:focus-visible + .menu-icon {
 }
 
 .monday-brand img {
-    width: 85%;
+    width: 100%;
    
 }
 
@@ -3589,16 +3595,16 @@ input:focus-visible + .menu-icon {
     }
 
     .tool-card h3 {
-        font-size: 20px;
+        font-size: 16px;
     }
 
     .tool-card > p {
         font-size: 13px;
-        min-height: 10px;
+        min-height: 60px;
     }
 
     .brand-list {
-    width: 50%;
+     
         gap: 12px;
     }
 
@@ -3699,7 +3705,8 @@ input:focus-visible + .menu-icon {
     }
 
     .brand-item img {
-     
+        width: 36px;
+        height: 36px;
     }
 
     .brand-item span {
@@ -3744,83 +3751,20 @@ input:focus-visible + .menu-icon {
 }
 
 
-/* =========================================================
-   REFACTOR PATCH — ACCESSIBILITY, NAVIGATION & PREVIEW UX
-   Existing visual rules are retained to protect the design.
-========================================================= */
-
-.skip-link {
-  position: absolute;
-  top: 12px;
-  left: 12px;
-  z-index: 1000;
-  padding: 10px 16px;
-  color: #fff;
-  background: var(--orange, #ff570f);
-  border-radius: 6px;
-  transform: translateY(-160%);
-}
-
-.skip-link:focus {
-  transform: translateY(0);
-}
-
-.menu-icon {
-  border: 0;
-  color: inherit;
-  background: transparent;
-  font: inherit;
-}
-
-.menu-icon:focus-visible {
-  outline: 3px solid var(--orange, #ff570f);
-  outline-offset: 4px;
-  border-radius: 5px;
-}
-
-@media (max-width: 768px) {
-  .menu-icon[aria-expanded="true"] + .main-nav {
-    display: flex;
-  }
-}
-
-/* Let the complete website screenshot move inside the laptop viewport. */
-.screen-content {
-  position: relative;
-}
-
-.screen-content img {
-  width: 100%;
-  height: auto;
-  min-height: 100%;
-  object-fit: cover;
-  object-position: top center;
-  transition: transform 5s ease;
-  will-change: transform;
-}
-
-.laptop-link:hover .screen-content img,
-.laptop-link:focus-visible .screen-content img {
-  transform: translateY(var(--scroll-distance, 0px));
-}
-
-.laptop-link:not(:hover):not(:focus-visible) .screen-content img {
-  transform: translateY(0);
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .screen-content img {
-    will-change: auto;
-    transition: none !important;
-  }
-}
 
 
-/* Social marks remain non-interactive until real profile URLs are supplied. */
-.footer-social .social-placeholder {
-  display: inline-block;
-  margin-right: 12px;
-  font-size: 20px;
-  font-weight: 700;
-  color: inherit;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
